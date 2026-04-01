@@ -21,7 +21,8 @@ const MOCK_AI_REPLIES = [
 const MOCK_PEOPLE = [
   { id: 1, name: '다은', relation: '연인', color: '#F9A8D4' },
   { id: 2, name: 'Diane', relation: '친구', color: 'var(--pink-mid)' },
-  { id: 3, name: 'Nathan', relation: '동료', color: '#F59E0B' },
+  { id: 3, name: '유정하', relation: '가족', color: '#F59E0B' },
+  { id: 4, name: 'Nathan', relation: '동료', color: '#60A5FA' },
 ];
 
 export default function CoachPage() {

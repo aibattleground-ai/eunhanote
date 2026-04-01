@@ -118,7 +118,8 @@ export default function HomePage() {
           {[
             { name: '다은', rel: '연인', color: '#F9A8D4', ohang: '화' },
             { name: 'Diane', rel: '친구', color: 'var(--pink-mid)', ohang: '목' },
-            { name: 'Nathan', rel: '동료', color: '#F59E0B', ohang: '토' },
+            { name: '유정하', rel: '가족', color: '#F59E0B', ohang: '토' },
+            { name: 'Nathan', rel: '동료', color: '#60A5FA', ohang: '금' },
           ].map((p) => (
             <Link key={p.name} href="/people" className={styles.personChip}>
               <div className={styles.personAvatar} style={{ background: `${p.color}22`, borderColor: `${p.color}55` }}>

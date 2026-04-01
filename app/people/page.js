@@ -9,9 +9,10 @@ import styles from './page.module.css';
 const RELATION_TAGS = ['연인', '가족', '친구', '직장', '기타'];
 
 const MOCK_PEOPLE = [
-  { id: 1, name: '다은', relation: '연인', ohang: '화', color: '#F87171', birth: '1996.03.15', memo: '처음 만났을 때부터 편했던 사람' },
-  { id: 2, name: 'Diane', relation: '친구', ohang: '목', color: '#4ADE80', birth: '1997.07.22', memo: '10년 지기 베프' },
-  { id: 3, name: 'Nathan', relation: '가족', ohang: '토', color: '#FBBF24', birth: '1968.05.10', memo: '' },
+  { id: 1, name: '다은', relation: '연인', ohang: '화', color: '#F87171', birth: '1992.08.17 08:30', memo: '소중한 사람' },
+  { id: 2, name: 'Diane', relation: '친구', ohang: '목', color: '#4ADE80', birth: '1992.08.17 08:30', memo: '든든한 베프' },
+  { id: 3, name: '유정하', relation: '가족', ohang: '토', color: '#FBBF24', birth: '1991.06.27 00:30', memo: '' },
+  { id: 4, name: 'Nathan', relation: '동료', ohang: '금', color: '#60A5FA', birth: '1991.06.27 00:30', memo: '좋은 파트너' },
 ];
 
 export default function PeoplePage() {

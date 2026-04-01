@@ -64,7 +64,8 @@ export default function CompatibilityPage() {
   const MOCK_PEOPLE = [
     { id: 1, name: '다은', relation: '연인', color: '#F87171' },
     { id: 2, name: 'Diane', relation: '친구', color: '#4ADE80' },
-    { id: 3, name: 'Nathan', relation: '가족', color: '#FBBF24' },
+    { id: 3, name: '유정하', relation: '가족', color: '#FBBF24' },
+    { id: 4, name: 'Nathan', relation: '동료', color: '#60A5FA' },
   ];
 
   const handleSelectPartner = (p) => {
