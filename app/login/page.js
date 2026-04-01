@@ -84,7 +84,7 @@ export default function LoginPage() {
             <div className={styles.stepBadge}>1 / 4</div>
             <h2 className={styles.cardTitle}>어떻게 불러드릴까요?</h2>
             <p className={styles.cardDesc}>이름 또는 닉네임을 입력해주세요</p>
-            <input className="input-field" style={{ marginTop: 20 }} placeholder="예: 지은, 별이, 하늘" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} maxLength={10} />
+            <input className="input-field" style={{ marginTop: 20 }} placeholder="예: 유정하🩵정다은" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} maxLength={10} />
             <button className={`btn-primary ${styles.nextBtn}`} onClick={() => form.name && next('birthday')} style={{ opacity: form.name ? 1 : 0.5 }}>
               다음 ✦
             </button>
