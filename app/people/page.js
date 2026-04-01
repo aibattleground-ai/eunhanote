@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import StarsBg from '../components/StarsBg';
+import GlowingGlobe from '../components/GlowingGlobe';
 import TopBar from '../components/TopBar';
 import BottomNav from '../components/BottomNav';
 import styles from './page.module.css';
@@ -8,9 +9,9 @@ import styles from './page.module.css';
 const RELATION_TAGS = ['연인', '가족', '친구', '직장', '기타'];
 
 const MOCK_PEOPLE = [
-  { id: 1, name: '민준', relation: '연인', ohang: '화', color: '#F87171', birth: '1996.03.15', memo: '처음 만났을 때부터 편했던 사람' },
-  { id: 2, name: '수진', relation: '친구', ohang: '목', color: '#4ADE80', birth: '1997.07.22', memo: '10년 지기 베프' },
-  { id: 3, name: '엄마', relation: '가족', ohang: '토', color: '#FBBF24', birth: '1968.05.10', memo: '' },
+  { id: 1, name: '다은', relation: '연인', ohang: '화', color: '#F87171', birth: '1996.03.15', memo: '처음 만났을 때부터 편했던 사람' },
+  { id: 2, name: 'Diane', relation: '친구', ohang: '목', color: '#4ADE80', birth: '1997.07.22', memo: '10년 지기 베프' },
+  { id: 3, name: 'Nathan', relation: '가족', ohang: '토', color: '#FBBF24', birth: '1968.05.10', memo: '' },
 ];
 
 export default function PeoplePage() {
@@ -37,6 +38,7 @@ export default function PeoplePage() {
 
   return (
     <div className="page-container">
+      <GlowingGlobe />
       <StarsBg count={40} />
       <TopBar title="관계 노트" backHref="/home" />
 

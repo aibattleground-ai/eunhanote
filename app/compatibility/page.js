@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import StarsBg from '../components/StarsBg';
+import GlowingGlobe from '../components/GlowingGlobe';
 import TopBar from '../components/TopBar';
 import BottomNav from '../components/BottomNav';
 import styles from './page.module.css';
@@ -61,9 +62,9 @@ export default function CompatibilityPage() {
   const [result, setResult] = useState(null);
 
   const MOCK_PEOPLE = [
-    { id: 1, name: '민준', relation: '연인', color: '#F87171' },
-    { id: 2, name: '수진', relation: '친구', color: '#4ADE80' },
-    { id: 3, name: '엄마', relation: '가족', color: '#FBBF24' },
+    { id: 1, name: '다은', relation: '연인', color: '#F87171' },
+    { id: 2, name: 'Diane', relation: '친구', color: '#4ADE80' },
+    { id: 3, name: 'Nathan', relation: '가족', color: '#FBBF24' },
   ];
 
   const handleSelectPartner = (p) => {
@@ -90,6 +91,7 @@ export default function CompatibilityPage() {
 
   return (
     <div className="page-container">
+      <GlowingGlobe />
       <StarsBg count={40} />
       <TopBar title="궁합 분석" backHref="/home" />
 

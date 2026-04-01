@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import StarsBg from '../components/StarsBg';
+import GlowingGlobe from '../components/GlowingGlobe';
 import TopBar from '../components/TopBar';
 import BottomNav from '../components/BottomNav';
 import styles from './page.module.css';
@@ -23,6 +24,7 @@ const OHANG_DATA = [
 export default function HomePage() {
   return (
     <div className="page-container">
+      <GlowingGlobe />
       <StarsBg count={50} />
       <TopBar />
       <div className="content-area">
@@ -114,9 +116,9 @@ export default function HomePage() {
         </div>
         <div className={styles.peopleRow}>
           {[
-            { name: '민준', rel: '연인', color: '#F9A8D4', ohang: '화' },
-            { name: '수진', rel: '친구', color: '#C084FC', ohang: '목' },
-            { name: '엄마', rel: '가족', color: '#F59E0B', ohang: '토' },
+            { name: '다은', rel: '연인', color: '#F9A8D4', ohang: '화' },
+            { name: 'Diane', rel: '친구', color: 'var(--pink-mid)', ohang: '목' },
+            { name: 'Nathan', rel: '동료', color: '#F59E0B', ohang: '토' },
           ].map((p) => (
             <Link key={p.name} href="/people" className={styles.personChip}>
               <div className={styles.personAvatar} style={{ background: `${p.color}22`, borderColor: `${p.color}55` }}>

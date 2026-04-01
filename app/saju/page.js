@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import StarsBg from '../components/StarsBg';
+import GlowingGlobe from '../components/GlowingGlobe';
 import TopBar from '../components/TopBar';
 import BottomNav from '../components/BottomNav';
 import styles from './page.module.css';
@@ -36,6 +37,7 @@ export default function SajuPage() {
 
   return (
     <div className="page-container">
+      <GlowingGlobe />
       <StarsBg count={40} />
       <TopBar title="기본 사주 분석" backHref="/home" />
 
