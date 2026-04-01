@@ -7,6 +7,7 @@ import styles from './page.module.css';
 export default function RootPage() {
   const router = useRouter();
   const [phase, setPhase] = useState('start'); // 'start' | 'video' | 'splash'
+  const [canSkip, setCanSkip] = useState(false);
   const basePath = process.env.NODE_ENV === 'production' ? '/eunhanote' : '';
 
   useEffect(() => {
@@ -29,16 +30,21 @@ export default function RootPage() {
         </div>
       )}
       {phase === 'video' && (
-        <div className={styles.videoWrap} onClick={handleVideoEnd}>
+        <div className={styles.videoWrap} onClick={() => canSkip && handleVideoEnd()}>
           <video 
             src={`${basePath}/intro.mp4`} 
             autoPlay 
             playsInline 
+            onTimeUpdate={(e) => {
+              if (e.target.currentTime > 5 && !canSkip) {
+                setCanSkip(true);
+              }
+            }}
             onEnded={handleVideoEnd}
             onError={handleVideoEnd}
             className={styles.introVideo}
           />
-          <div className={styles.skipHint}>화면을 터치해서 스킵하기</div>
+          {canSkip && <div className={styles.skipHint}>화면을 터치해서 스킵하기</div>}
         </div>
       )}
 
