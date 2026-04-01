@@ -25,7 +25,7 @@ export default function RootPage() {
       {phase === 'video' && (
         <div className={styles.videoWrap} onClick={handleVideoEnd}>
           <video 
-            src={`${basePath}/123.mov`} 
+            src={`${basePath}/intro.mp4`} 
             autoPlay 
             muted 
             playsInline 
