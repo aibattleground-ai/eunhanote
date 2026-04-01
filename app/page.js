@@ -7,6 +7,7 @@ import styles from './page.module.css';
 export default function RootPage() {
   const router = useRouter();
   const [phase, setPhase] = useState('video'); // 'video' | 'splash'
+  const basePath = process.env.NODE_ENV === 'production' ? '/eunhanote' : '';
 
   useEffect(() => {
     if (phase === 'splash') {
@@ -24,11 +25,12 @@ export default function RootPage() {
       {phase === 'video' && (
         <div className={styles.videoWrap} onClick={handleVideoEnd}>
           <video 
-            src="/123.mov" 
+            src={`${basePath}/123.mov`} 
             autoPlay 
             muted 
             playsInline 
             onEnded={handleVideoEnd}
+            onError={handleVideoEnd}
             className={styles.introVideo}
           />
           <div className={styles.skipHint}>화면을 터치해서 스킵하기</div>
