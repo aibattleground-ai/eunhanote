@@ -1,0 +1,109 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: rgba(20, 8, 45, 0.85);
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(192, 132, 252, 0.15);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  min-width: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logoStar {
+  font-size: 16px;
+  color: #F9A8D4;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; text-shadow: 0 0 10px #F9A8D4; }
+}
+
+.logoText {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 17px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #C084FC, #F9A8D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(107, 63, 160, 0.25);
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  color: rgba(243, 232, 255, 0.8);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.backBtn:hover {
+  background: rgba(107, 63, 160, 0.5);
+  border-color: rgba(192, 132, 252, 0.5);
+  color: #C084FC;
+}
+
+.title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(243, 232, 255, 0.95);
+  text-align: center;
+  flex: 1;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 80px;
+}
+
+.marbleBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(107, 63, 160, 0.3);
+  border: 1px solid rgba(249, 168, 212, 0.35);
+  border-radius: 20px;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.marbleBtn:hover {
+  background: rgba(107, 63, 160, 0.5);
+  border-color: rgba(249, 168, 212, 0.6);
+}
+
+.marbleCount {
+  font-size: 14px;
+  font-weight: 700;
+  color: #F9A8D4;
+}
+
+.marbleLabel {
+  font-size: 11px;
+  color: rgba(249, 168, 212, 0.7);
+}
