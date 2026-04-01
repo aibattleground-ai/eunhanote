@@ -6,7 +6,7 @@ import styles from './page.module.css';
 
 export default function RootPage() {
   const router = useRouter();
-  const [phase, setPhase] = useState('video'); // 'video' | 'splash'
+  const [phase, setPhase] = useState('start'); // 'start' | 'video' | 'splash'
   const basePath = process.env.NODE_ENV === 'production' ? '/eunhanote' : '';
 
   useEffect(() => {
@@ -16,18 +16,23 @@ export default function RootPage() {
     }
   }, [phase, router]);
 
-  const handleVideoEnd = () => {
-    setPhase('splash');
-  };
+  const handleStart = () => setPhase('video');
+  const handleVideoEnd = () => setPhase('splash');
 
   return (
     <div className={styles.container}>
+      {phase === 'start' && (
+        <div className={styles.startWrap} onClick={handleStart}>
+          <div className={styles.startPill}>
+            <span>🌸 화면을 터치해 시작하기</span>
+          </div>
+        </div>
+      )}
       {phase === 'video' && (
         <div className={styles.videoWrap} onClick={handleVideoEnd}>
           <video 
             src={`${basePath}/intro.mp4`} 
             autoPlay 
-            muted 
             playsInline 
             onEnded={handleVideoEnd}
             onError={handleVideoEnd}
