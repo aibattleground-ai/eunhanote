@@ -1,7 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import StarsBg from '../components/StarsBg';
-import GlowingGlobe from '../components/GlowingGlobe';
+import SakuraFalling from '../components/SakuraFalling';
 import TopBar from '../components/TopBar';
 import BottomNav from '../components/BottomNav';
 import styles from './page.module.css';
@@ -97,7 +97,7 @@ export default function CoachPage() {
 
   return (
     <div className="page-container">
-      <GlowingGlobe />
+      <SakuraFalling count={20} />
       <StarsBg count={30} />
       <TopBar title="관계 코치 AI" backHref="/home" />
 

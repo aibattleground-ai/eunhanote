@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import StarsBg from '../components/StarsBg';
-import GlowingGlobe from '../components/GlowingGlobe';
+import SakuraFalling from '../components/SakuraFalling';
 import TopBar from '../components/TopBar';
 import BottomNav from '../components/BottomNav';
 import styles from './page.module.css';
@@ -38,7 +38,7 @@ export default function PeoplePage() {
 
   return (
     <div className="page-container">
-      <GlowingGlobe />
+      <SakuraFalling count={25} />
       <StarsBg count={40} />
       <TopBar title="관계 노트" backHref="/home" />
 

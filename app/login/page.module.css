@@ -3,9 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(ellipse at 30% 20%, rgba(107, 63, 160, 0.45) 0%, transparent 50%),
-              radial-gradient(ellipse at 70% 80%, rgba(59, 26, 107, 0.5) 0%, transparent 50%),
-              #0D0520;
+  background: radial-gradient(ellipse at 30% 20%, rgba(251, 207, 232, 0.8) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, rgba(254, 243, 199, 0.8) 0%, transparent 50%),
+              var(--bg-base);
   padding: 24px 20px;
   position: relative;
   overflow: hidden;
@@ -26,19 +26,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .logoIcon {
-  width: 70px;
-  height: 70px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.3) 0%, rgba(107, 63, 160, 0.2) 100%);
-  border: 1.5px solid rgba(192, 132, 252, 0.4);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(252, 231, 243, 0.8) 100%);
+  border: 2px solid rgba(244, 114, 182, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 30px rgba(192, 132, 252, 0.35);
+  box-shadow: 0 8px 30px rgba(236, 72, 153, 0.15);
   animation: float 3s ease-in-out infinite;
 }
 
@@ -48,37 +48,40 @@
 }
 
 .logoStar {
-  font-size: 30px;
-  background: linear-gradient(135deg, var(--pink-mid), #F9A8D4);
+  font-size: 34px;
+  background: linear-gradient(135deg, var(--pink-hot), #F59E0B);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.3));
 }
 
 .logoTitle {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 28px;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--pink-mid) 0%, #F9A8D4 60%, #F59E0B 100%);
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--pink-hot) 0%, #BE123C 60%, #F59E0B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: -1px;
 }
 
 .logoDesc {
-  font-size: 13px;
-  color: rgba(243, 232, 255, 0.5);
-  letter-spacing: 0.3px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
 }
 
 .card {
   width: 100%;
-  background: rgba(45, 16, 96, 0.5);
-  border: 1px solid rgba(192, 132, 252, 0.25);
-  border-radius: 20px;
-  padding: 28px 24px;
-  backdrop-filter: blur(30px);
-  box-shadow: 0 8px 40px rgba(107, 63, 160, 0.4);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  border-radius: 24px;
+  padding: 32px 24px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 40px rgba(236, 72, 153, 0.1);
 }
 
 .slideUp {
@@ -86,55 +89,58 @@
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(28px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .stepBadge {
   display: inline-block;
-  padding: 3px 10px;
-  background: rgba(249, 168, 212, 0.15);
-  border: 1px solid rgba(249, 168, 212, 0.3);
-  border-radius: 12px;
-  font-size: 11px;
-  color: #F9A8D4;
-  margin-bottom: 14px;
+  padding: 4px 12px;
+  background: rgba(244, 114, 182, 0.15);
+  border: 1px solid rgba(244, 114, 182, 0.4);
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--pink-hot);
+  margin-bottom: 16px;
 }
 
 .cardHint {
-  font-size: 12px;
-  color: rgba(192, 132, 252, 0.7);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pink-mid);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .cardTitle {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 22px;
-  font-weight: 700;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
   color: var(--text-white);
   line-height: 1.4;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .cardDesc {
-  font-size: 13px;
-  color: rgba(243, 232, 255, 0.5);
-  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-soft);
+  margin-bottom: 6px;
 }
 
 .nextBtn {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 /* Social buttons */
 .socialBtns {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 14px;
+  margin-top: 24px;
 }
 
 .kakaoBtn {
@@ -142,23 +148,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 15px;
+  gap: 12px;
+  padding: 16px;
   background: #FEE500;
   color: #3C1E1E;
   border: none;
-  border-radius: 12px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  border-radius: 14px;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 800;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(254, 229, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(254, 229, 0, 0.2);
 }
 
 .kakaoBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(254, 229, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(254, 229, 0, 0.4);
 }
 
 .appleBtn {
@@ -166,35 +172,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.95);
-  color: #1a1a1a;
+  gap: 12px;
+  padding: 16px;
+  background: #000;
+  color: #FFF;
   border: none;
-  border-radius: 12px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  border-radius: 14px;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 800;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .appleBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .terms {
-  margin-top: 16px;
-  font-size: 11px;
-  color: rgba(243, 232, 255, 0.3);
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
   text-align: center;
   line-height: 1.6;
 }
 
 .terms span {
-  color: rgba(192, 132, 252, 0.6);
+  color: var(--pink-hot);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -202,42 +209,45 @@
 /* Calendar type tabs */
 .calTypeTabs {
   display: flex;
-  gap: 8px;
-  margin-top: 16px;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .calTab {
   flex: 1;
-  padding: 10px;
-  background: rgba(59, 26, 107, 0.3);
-  border: 1px solid rgba(192, 132, 252, 0.2);
-  border-radius: 10px;
-  color: rgba(243, 232, 255, 0.5);
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 14px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 12px;
+  color: var(--text-soft);
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .calTabActive {
-  background: rgba(107, 63, 160, 0.4);
-  border-color: var(--pink-mid);
-  color: var(--pink-mid);
-  font-weight: 600;
+  background: white;
+  border-color: var(--pink-hot);
+  color: var(--pink-hot);
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.1);
 }
 
 /* Time unknown checkbox */
 .timeUnknown {
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
 .checkLabel {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
-  font-size: 14px;
-  color: rgba(243, 232, 255, 0.7);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-soft);
 }
 
 .checkLabel input[type="checkbox"] {
@@ -245,11 +255,11 @@
 }
 
 .checkCustom {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 6px;
-  border: 1.5px solid rgba(192, 132, 252, 0.4);
-  background: rgba(59, 26, 107, 0.3);
+  border: 1.5px solid rgba(236, 72, 153, 0.4);
+  background: rgba(255, 255, 255, 0.8);
   display: inline-block;
   position: relative;
   flex-shrink: 0;
@@ -257,8 +267,8 @@
 }
 
 .checkLabel input:checked ~ .checkCustom {
-  background: rgba(107, 63, 160, 0.6);
-  border-color: var(--pink-mid);
+  background: var(--pink-hot);
+  border-color: var(--pink-hot);
 }
 
 .checkLabel input:checked ~ .checkCustom::after {
@@ -268,57 +278,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--pink-mid);
-  font-size: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 /* Gender buttons */
 .genderBtns {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 16px;
+  gap: 12px;
+  margin-top: 18px;
 }
 
 .genderBtn {
   width: 100%;
-  padding: 14px;
-  background: rgba(59, 26, 107, 0.3);
-  border: 1px solid rgba(192, 132, 252, 0.2);
-  border-radius: 12px;
-  color: rgba(243, 232, 255, 0.7);
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 15px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 14px;
+  color: var(--text-soft);
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
-  padding-left: 20px;
 }
 
 .genderBtn:hover {
-  border-color: rgba(192, 132, 252, 0.4);
-  background: rgba(107, 63, 160, 0.25);
+  background: white;
+  border-color: rgba(236, 72, 153, 0.4);
 }
 
 .genderBtnActive {
-  background: rgba(107, 63, 160, 0.4);
-  border-color: var(--pink-mid);
-  color: var(--text-white);
-  font-weight: 600;
-  box-shadow: 0 0 16px rgba(192, 132, 252, 0.25);
+  background: white;
+  border-color: var(--pink-hot);
+  color: var(--pink-hot);
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.15);
 }
 
 /* Star particle */
 .particle {
   position: fixed;
-  font-size: 18px;
-  color: #F9A8D4;
+  font-size: 20px;
+  color: var(--pink-hot);
   pointer-events: none;
   z-index: 10;
   animation: particle-burst 1s ease-out forwards;
 }
 
 @keyframes particle-burst {
-  0% { opacity: 1; transform: translateY(0) scale(1); }
-  100% { opacity: 0; transform: translateY(-60px) scale(0.3); }
+  0% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: translateY(-80px) scale(0.3) rotate(180deg); }
 }

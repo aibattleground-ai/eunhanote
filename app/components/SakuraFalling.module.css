@@ -1,0 +1,36 @@
+.sakuraContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.petalWrap {
+  position: absolute;
+  top: -10vh; /* Start above screen */
+  opacity: 0;
+}
+
+.petal {
+  /* Shape of a cherry blossom petal */
+  background: radial-gradient(circle at 30% 30%, #FFF0F5 0%, #FBCFE8 70%, #F472B6 100%);
+  border-radius: 5px 0 5px 0;
+  box-shadow: 0 2px 5px rgba(244, 114, 182, 0.4);
+  transform: rotate(45deg);
+}
+
+@keyframes fall {
+  0% { transform: translateY(-5vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(115vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes sway {
+  0% { transform: translateX(-30px) rotate(-15deg); }
+  100% { transform: translateX(30px) rotate(15deg); }
+}

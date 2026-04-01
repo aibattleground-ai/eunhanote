@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import StarsBg from '../components/StarsBg';
-import GlowingGlobe from '../components/GlowingGlobe';
+import SakuraFalling from '../components/SakuraFalling';
 import TopBar from '../components/TopBar';
 import BottomNav from '../components/BottomNav';
 import styles from './page.module.css';
@@ -24,7 +24,7 @@ const OHANG_DATA = [
 export default function HomePage() {
   return (
     <div className="page-container">
-      <GlowingGlobe />
+      <SakuraFalling count={30} />
       <StarsBg count={50} />
       <TopBar />
       <div className="content-area">

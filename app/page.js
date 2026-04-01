@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import StarsBg from './components/StarsBg';
+import SakuraFalling from './components/SakuraFalling';
 import styles from './page.module.css';
 
 export default function RootPage() {
@@ -13,7 +13,7 @@ export default function RootPage() {
 
   return (
     <div className={styles.splash}>
-      <StarsBg count={90} />
+      <SakuraFalling count={30} />
       <div className={styles.center}>
         <div className={styles.magicCircle}>
           <div className={styles.ring1} />

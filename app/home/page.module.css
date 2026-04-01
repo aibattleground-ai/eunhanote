@@ -1,14 +1,15 @@
 .welcomeBanner {
-  background: linear-gradient(135deg, rgba(124,58,237,0.45) 0%, rgba(90,25,140,0.6) 100%);
-  border: 1px solid rgba(236,72,153,0.25);
+  background: linear-gradient(135deg, rgba(253, 224, 237, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
+  border: 1px solid rgba(236, 72, 153, 0.3);
   border-radius: 20px;
   padding: 24px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.08);
 }
 
 .welcomeBanner::before {
@@ -16,48 +17,54 @@
   position: absolute;
   top: -30px; right: -30px;
   width: 120px; height: 120px;
-  background: radial-gradient(circle, rgba(236,72,153,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .welcomeLeft { flex: 1; }
 
 .welcomeGreet {
-  font-size: 13px;
-  color: rgba(253,244,255,0.6);
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
 .welcomeTitle {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
   color: var(--text-white);
   line-height: 1.4;
   margin-bottom: 8px;
+  letter-spacing: -0.5px;
 }
 
 .todayDate {
-  font-size: 11px;
-  color: rgba(236,72,153,0.6);
+  font-size: 12px;
+  color: var(--pink-hot);
+  font-weight: 700;
 }
 
 .welcomeOrb {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(236, 72, 153, 0.1), 0 4px 15px rgba(236, 72, 153, 0.1);
 }
 
 .orbRing {
   position: absolute;
-  inset: 0;
+  inset: -4px;
   border-radius: 50%;
-  border: 1.5px solid rgba(236,72,153,0.4);
-  animation: spin-slow 6s linear infinite;
+  border: 1.5px dashed rgba(245, 158, 11, 0.4);
+  animation: spin-slow 8s linear infinite;
 }
 
 @keyframes spin-slow {
@@ -66,49 +73,51 @@
 }
 
 .orbStar {
-  font-size: 28px;
-  background: linear-gradient(135deg, var(--pink-mid), #F9A8D4);
+  font-size: 32px;
+  background: linear-gradient(135deg, var(--pink-hot), var(--gold-bright));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(236,72,153,0.6));
+  filter: drop-shadow(0 2px 5px rgba(245, 158, 11, 0.3));
   animation: pulse 3s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%,100% { filter: drop-shadow(0 0 6px rgba(236,72,153,0.4)); }
-  50% { filter: drop-shadow(0 0 16px rgba(236,72,153,0.8)); }
+  0%,100% { transform: scale(0.95); }
+  50% { transform: scale(1.05); }
 }
 
 /* Tip card */
 .tipCard {
-  background: rgba(245,158,11,0.08);
-  border: 1px solid rgba(245,158,11,0.2);
-  border-radius: 14px;
+  background: rgba(254, 243, 199, 0.7);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 16px;
   padding: 16px;
   margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(251, 191, 36, 0.05);
 }
 
 .tipHeader {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 8px;
 }
 
-.tipIcon { font-size: 16px; }
+.tipIcon { font-size: 16px; filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.4)); }
 
 .tipLabel {
-  font-size: 12px;
-  font-weight: 600;
-  color: #F59E0B;
-  letter-spacing: 0.3px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #D97706;
+  letter-spacing: 0.5px;
 }
 
 .tipText {
-  font-size: 13px;
-  color: rgba(253,244,255,0.75);
-  line-height: 1.7;
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.6;
+  font-weight: 600;
 }
 
 /* Section headers */
@@ -116,113 +125,127 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .sectionLabel {
-  font-size: 15px;
-  font-weight: 700;
-  color: rgba(253,244,255,0.9);
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.3px;
 }
 
 .seeAll {
-  font-size: 12px;
-  color: rgba(236,72,153,0.7);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pink-hot);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(236, 72, 153, 0.2);
 }
-.seeAll:hover { color: var(--pink-mid); }
+.seeAll:hover { background: var(--pink-hot); color: white; }
 
 /* Saju card */
 .sajuCard {
-  background: rgba(55,15,100,0.45);
-  border: 1px solid rgba(236,72,153,0.2);
-  border-radius: 18px;
-  padding: 20px;
-  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 28px;
   backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.05);
 }
 
 .sajuGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .pillarCell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: 10px 4px;
-  background: rgba(90,25,140,0.4);
-  border: 1px solid rgba(236,72,153,0.15);
-  border-radius: 12px;
+  gap: 4px;
+  padding: 12px 6px;
+  background: rgba(252, 231, 243, 0.5);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+  border-radius: 14px;
 }
 
 .pillarMe {
-  background: rgba(124,58,237,0.4);
-  border-color: rgba(236,72,153,0.4);
-  box-shadow: 0 0 12px rgba(236,72,153,0.2);
+  background: linear-gradient(135deg, rgba(252, 231, 243, 0.9), rgba(255, 255, 255, 1));
+  border-color: var(--pink-hot);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
 }
 
 .pillarLabel {
-  font-size: 10px;
-  color: rgba(253,244,255,0.4);
-  margin-bottom: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 
 .pillarChar {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1;
+  font-family: 'Gowun Dodum', serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.1;
 }
 
 .pillarSub {
-  font-size: 10px;
-  color: rgba(253,244,255,0.4);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-soft);
 }
 
 /* Ohang bar */
 .ohangBar {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .ohangItem {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .ohangName {
-  font-size: 12px;
-  font-weight: 600;
-  width: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  width: 18px;
   flex-shrink: 0;
+  color: var(--text-white);
 }
 
 .ohangTrack {
   flex: 1;
-  height: 6px;
-  background: rgba(90,25,140,0.5);
-  border-radius: 3px;
+  height: 8px;
+  background: rgba(236, 72, 153, 0.1);
+  border-radius: 4px;
   overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(236, 72, 153, 0.05);
 }
 
 .ohangFill {
   height: 100%;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: width 0.8s ease;
 }
 
 .ohangVal {
-  font-size: 11px;
-  color: rgba(253,244,255,0.4);
-  width: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-soft);
+  width: 34px;
   text-align: right;
   flex-shrink: 0;
 }
@@ -231,37 +254,41 @@
 .quickMenu {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 28px;
 }
 
 .menuCard {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px;
-  background: rgba(55,15,100,0.4);
-  border: 1px solid rgba(236,72,153,0.18);
-  border-radius: 16px;
+  gap: 16px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 18px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(20px);
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.03);
 }
 
 .menuCard:hover {
-  background: rgba(124,58,237,0.3);
-  border-color: rgba(236,72,153,0.35);
+  background: rgba(255, 255, 255, 1);
+  border-color: var(--pink-hot);
   transform: translateX(4px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.1);
 }
 
 .menuIcon {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 24px;
+  background: rgba(252, 231, 243, 0.6);
+  border: 1px solid rgba(244, 114, 182, 0.3);
   flex-shrink: 0;
 }
 
@@ -269,40 +296,46 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .menuLabel {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--text-white);
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .menuDesc {
-  font-size: 12px;
-  color: rgba(253,244,255,0.5);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .menuCost {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 11px;
-  color: rgba(249,168,212,0.7);
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-bright);
   flex-shrink: 0;
+  background: rgba(254, 243, 199, 0.5);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 .marbleDot {
-  color: #F9A8D4;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 /* People row */
 .peopleRow {
   display: flex;
-  gap: 10px;
+  gap: 14px;
   overflow-x: auto;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   scrollbar-width: none;
 }
 .peopleRow::-webkit-scrollbar { display: none; }
@@ -311,54 +344,62 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .personAvatar {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: 1.5px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.personChip:hover .personAvatar {
-  transform: scale(1.05);
-  box-shadow: 0 4px 16px rgba(236,72,153,0.3);
-}
-
-.addPersonIcon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 1.5px dashed rgba(236,72,153,0.3);
+  border: 2px solid rgba(236, 72, 153, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: rgba(236,72,153,0.5);
+  font-weight: 800;
+  background: white;
+  color: var(--pink-hot);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.1);
+}
+
+.personChip:hover .personAvatar {
+  transform: scale(1.05);
+  border-color: var(--pink-hot);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.2);
+}
+
+.addPersonIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px dashed rgba(236, 72, 153, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--pink-mid);
+  background: rgba(255, 255, 255, 0.6);
   transition: all 0.3s ease;
 }
 
 .addPersonChip:hover .addPersonIcon {
-  border-color: rgba(236,72,153,0.6);
-  color: var(--pink-mid);
+  border-color: var(--pink-hot);
+  color: var(--pink-hot);
+  background: white;
+  transform: scale(1.05);
 }
 
 .personName {
-  font-size: 12px;
-  color: rgba(253,244,255,0.7);
-  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-soft);
+  font-weight: 700;
 }
 
 .personRel {
-  font-size: 10px;
-  color: rgba(253,244,255,0.35);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
 }

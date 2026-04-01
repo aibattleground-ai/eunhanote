@@ -6,66 +6,69 @@
   margin-bottom: 8px;
 }
 .yearDecor {
-  font-size: 18px;
+  font-size: 20px;
   color: #F59E0B;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .yearTitle {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 24px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #F59E0B, #F9A8D4);
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #F59E0B, var(--pink-hot));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .yearDesc {
   text-align: center;
-  font-size: 13px;
-  color: rgba(253,244,255,0.5);
+  font-size: 14px;
+  color: var(--text-soft);
+  font-weight: 600;
   line-height: 1.7;
   margin-bottom: 24px;
 }
 .previewCards {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .previewChip {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 12px 16px;
-  border-radius: 14px;
-  border: 1px solid;
-  font-size: 22px;
-  min-width: 64px;
-  font-size: 12px;
+  gap: 6px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  min-width: 68px;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.05);
 }
 .analyzeBtn {
   width: 100%;
   padding: 16px;
-  font-size: 15px;
+  font-size: 16px;
 }
 .loadingBox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   padding: 40px;
-  color: rgba(253,244,255,0.6);
-  font-size: 14px;
+  color: var(--text-soft);
+  font-size: 15px;
+  font-weight: 600;
 }
 .spinner {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 28px;
   color: var(--pink-mid);
 }
 .spinRing {
@@ -73,8 +76,8 @@
   inset: 0;
   border-radius: 50%;
   border: 2px solid transparent;
-  border-top-color: var(--pink-mid);
-  border-bottom-color: #F9A8D4;
+  border-top-color: var(--pink-hot);
+  border-bottom-color: var(--gold-bright);
   animation: spin 1.2s linear infinite;
 }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -84,100 +87,115 @@
 
 .keywordsRow {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .keywordTag {
-  padding: 5px 12px;
-  background: rgba(236,72,153,0.15);
-  border: 1px solid rgba(236,72,153,0.3);
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(236, 72, 153, 0.4);
   border-radius: 20px;
-  font-size: 12px;
-  color: var(--pink-mid);
-  font-weight: 600;
+  font-size: 13px;
+  color: var(--pink-hot);
+  font-weight: 700;
   animation: pop-in 0.4s ease forwards;
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.1);
 }
 @keyframes pop-in { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
 .summaryCard {
-  background: rgba(245,158,11,0.08);
-  border: 1px solid rgba(245,158,11,0.2);
-  border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 16px;
+  background: rgba(254, 243, 199, 0.8);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.05);
 }
 .summaryText {
-  font-size: 13px;
-  color: rgba(253,244,255,0.75);
+  font-size: 14px;
+  color: var(--text-soft);
+  font-weight: 600;
   line-height: 1.75;
 }
 .summaryText strong {
-  color: #F59E0B;
+  color: #D97706;
+  font-weight: 800;
 }
 
 .quarterCard {
-  border: 1px solid;
-  border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 10px;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   animation: slide-up 0.4s ease forwards;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.05);
 }
-@keyframes slide-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slide-up { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
+.quarterCard:hover {
+  background: white;
+  border-color: var(--pink-hot);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.1);
+}
 .quarterCard:active { transform: scale(0.99); }
 
 .quarterHeader {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
-.seasonIcon { font-size: 24px; flex-shrink: 0; }
-.seasonInfo { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-.seasonName { font-size: 12px; font-weight: 700; }
-.seasonTitle { font-size: 14px; color: rgba(253,244,255,0.8); font-weight: 500; }
-.chevron { font-size: 16px; color: rgba(253,244,255,0.4); transition: transform 0.3s ease; }
+.seasonIcon { font-size: 26px; flex-shrink: 0; }
+.seasonInfo { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.seasonName { font-size: 13px; font-weight: 800; color: var(--pink-hot); }
+.seasonTitle { font-size: 15px; color: var(--text-white); font-weight: 700; }
+.chevron { font-size: 16px; color: var(--text-muted); transition: transform 0.3s ease; }
 
 .quarterText {
-  font-size: 13px;
-  color: rgba(253,244,255,0.7);
+  font-size: 14px;
+  color: var(--text-soft);
   line-height: 1.75;
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(236,72,153,0.12);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(236, 72, 153, 0.15);
+  font-weight: 600;
 }
 
 .modalHandle {
-  width: 36px; height: 4px;
-  background: rgba(236,72,153,0.3);
-  border-radius: 2px;
+  width: 44px; height: 5px;
+  background: rgba(236, 72, 153, 0.2);
+  border-radius: 3px;
   margin: 0 auto 24px;
 }
 .modalTitle {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-family: 'Gowun Dodum', serif;
+  font-size: 22px;
+  font-weight: 800;
   color: var(--text-white);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .modalDesc {
-  font-size: 13px;
-  color: rgba(253,244,255,0.6);
+  font-size: 14px;
+  color: var(--text-soft);
+  font-weight: 600;
   text-align: center;
   line-height: 1.7;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .modalBalance {
-  background: rgba(124,58,237,0.3);
-  border: 1px solid rgba(236,72,153,0.25);
-  border-radius: 10px;
-  padding: 10px;
+  background: rgba(254, 243, 199, 0.6);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 12px;
+  padding: 14px;
   text-align: center;
-  font-size: 14px;
-  color: rgba(253,244,255,0.6);
-  margin-bottom: 20px;
+  font-size: 15px;
+  color: var(--text-soft);
+  margin-bottom: 24px;
+  font-weight: 600;
 }
-.modalBalance strong { color: #F9A8D4; font-weight: 700; }
+.modalBalance strong { color: #D97706; font-weight: 800; }

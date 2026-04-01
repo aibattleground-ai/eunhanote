@@ -7,10 +7,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 18px;
-  background: rgba(8, 3, 20, 0.85);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  border-bottom: 1px solid rgba(236, 72, 153, 0.12);
+  border-bottom: 1px solid rgba(236, 72, 153, 0.15);
 }
 
 .barGlow {
@@ -19,42 +19,40 @@
   transform: translateX(-50%);
   width: 60%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(236,72,153,0.4), rgba(245,158,11,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(236,72,153,0.3), rgba(245,158,11,0.2), transparent);
   pointer-events: none;
 }
 
 .left { display: flex; align-items: center; min-width: 60px; }
 
 .backBtn {
-  width: 36px; height: 36px;
+  width: 38px; height: 38px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%;
-  background: rgba(60, 20, 100, 0.4);
-  border: 1px solid rgba(167,139,250,0.25);
-  color: rgba(253,244,255,0.7);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  color: var(--pink-hot);
   text-decoration: none;
   transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(236, 72, 153, 0.05);
 }
 .backBtn:hover {
-  background: rgba(236,72,153,0.2);
-  border-color: rgba(236,72,153,0.5);
-  color: #F9A8D4;
+  background: rgba(252, 231, 243, 0.9);
+  border-color: var(--pink-hot);
+  color: var(--pink-hot);
+  transform: scale(1.05);
 }
 
 .logo { display: flex; align-items: center; gap: 6px; }
 .logoStar {
   font-size: 16px;
-  background: linear-gradient(135deg, #EC4899, #F59E0B);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 6px rgba(236,72,153,0.5));
+  filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.5));
 }
 .logoText {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 17px;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 18px;
   font-weight: 700;
-  background: linear-gradient(135deg, #F9A8D4, #E9D5FF, #FCD34D);
+  background: linear-gradient(135deg, #EC4899, #F59E0B);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,10 +60,10 @@
 }
 
 .title {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(253,244,255,0.9);
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-white);
   letter-spacing: -0.3px;
   position: absolute;
   left: 50%;
@@ -77,25 +75,29 @@
 .marbleBadge {
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 5px 10px;
-  background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(60,20,100,0.4));
-  border: 1px solid rgba(245,158,11,0.35);
+  gap: 6px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(254, 243, 199, 0.9));
+  border: 1px solid rgba(245, 158, 11, 0.3);
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(245, 158, 11, 0.1);
 }
 .marbleBadge:hover {
-  background: linear-gradient(135deg, rgba(245,158,11,0.25), rgba(60,20,100,0.6));
-  box-shadow: 0 0 12px rgba(245,158,11,0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), #FEF3C7);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+  transform: translateY(-1px);
 }
-.marbleDot { font-size: 13px; }
+.marbleDot { font-size: 14px; }
 .marbleNum {
-  font-size: 14px;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 15px;
   font-weight: 800;
-  color: #FCD34D;
+  color: #D97706;
 }
 .marbleLabel {
-  font-size: 11px;
-  color: rgba(253,244,255,0.45);
+  font-size: 12px;
+  color: rgba(74, 48, 56, 0.6);
+  font-weight: 600;
 }
