@@ -1,6 +1,6 @@
 .welcomeBanner {
-  background: linear-gradient(135deg, rgba(107,63,160,0.45) 0%, rgba(59,26,107,0.6) 100%);
-  border: 1px solid rgba(192,132,252,0.25);
+  background: linear-gradient(135deg, rgba(124,58,237,0.45) 0%, rgba(90,25,140,0.6) 100%);
+  border: 1px solid rgba(236,72,153,0.25);
   border-radius: 20px;
   padding: 24px 20px;
   display: flex;
@@ -16,7 +16,7 @@
   position: absolute;
   top: -30px; right: -30px;
   width: 120px; height: 120px;
-  background: radial-gradient(circle, rgba(192,132,252,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(236,72,153,0.2) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -24,7 +24,7 @@
 
 .welcomeGreet {
   font-size: 13px;
-  color: rgba(243,232,255,0.6);
+  color: rgba(253,244,255,0.6);
   margin-bottom: 6px;
 }
 
@@ -32,14 +32,14 @@
   font-family: 'Noto Serif KR', serif;
   font-size: 20px;
   font-weight: 700;
-  color: #F3E8FF;
+  color: var(--text-white);
   line-height: 1.4;
   margin-bottom: 8px;
 }
 
 .todayDate {
   font-size: 11px;
-  color: rgba(192,132,252,0.6);
+  color: rgba(236,72,153,0.6);
 }
 
 .welcomeOrb {
@@ -56,7 +56,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1.5px solid rgba(192,132,252,0.4);
+  border: 1.5px solid rgba(236,72,153,0.4);
   animation: spin-slow 6s linear infinite;
 }
 
@@ -67,17 +67,17 @@
 
 .orbStar {
   font-size: 28px;
-  background: linear-gradient(135deg, #C084FC, #F9A8D4);
+  background: linear-gradient(135deg, var(--pink-mid), #F9A8D4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(192,132,252,0.6));
+  filter: drop-shadow(0 0 10px rgba(236,72,153,0.6));
   animation: pulse 3s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%,100% { filter: drop-shadow(0 0 6px rgba(192,132,252,0.4)); }
-  50% { filter: drop-shadow(0 0 16px rgba(192,132,252,0.8)); }
+  0%,100% { filter: drop-shadow(0 0 6px rgba(236,72,153,0.4)); }
+  50% { filter: drop-shadow(0 0 16px rgba(236,72,153,0.8)); }
 }
 
 /* Tip card */
@@ -107,7 +107,7 @@
 
 .tipText {
   font-size: 13px;
-  color: rgba(243,232,255,0.75);
+  color: rgba(253,244,255,0.75);
   line-height: 1.7;
 }
 
@@ -122,21 +122,21 @@
 .sectionLabel {
   font-size: 15px;
   font-weight: 700;
-  color: rgba(243,232,255,0.9);
+  color: rgba(253,244,255,0.9);
 }
 
 .seeAll {
   font-size: 12px;
-  color: rgba(192,132,252,0.7);
+  color: rgba(236,72,153,0.7);
   text-decoration: none;
   transition: color 0.2s;
 }
-.seeAll:hover { color: #C084FC; }
+.seeAll:hover { color: var(--pink-mid); }
 
 /* Saju card */
 .sajuCard {
-  background: rgba(45,16,96,0.45);
-  border: 1px solid rgba(192,132,252,0.2);
+  background: rgba(55,15,100,0.45);
+  border: 1px solid rgba(236,72,153,0.2);
   border-radius: 18px;
   padding: 20px;
   margin-bottom: 24px;
@@ -156,20 +156,20 @@
   align-items: center;
   gap: 2px;
   padding: 10px 4px;
-  background: rgba(59,26,107,0.4);
-  border: 1px solid rgba(192,132,252,0.15);
+  background: rgba(90,25,140,0.4);
+  border: 1px solid rgba(236,72,153,0.15);
   border-radius: 12px;
 }
 
 .pillarMe {
-  background: rgba(107,63,160,0.4);
-  border-color: rgba(192,132,252,0.4);
-  box-shadow: 0 0 12px rgba(192,132,252,0.2);
+  background: rgba(124,58,237,0.4);
+  border-color: rgba(236,72,153,0.4);
+  box-shadow: 0 0 12px rgba(236,72,153,0.2);
 }
 
 .pillarLabel {
   font-size: 10px;
-  color: rgba(243,232,255,0.4);
+  color: rgba(253,244,255,0.4);
   margin-bottom: 4px;
 }
 
@@ -182,7 +182,7 @@
 
 .pillarSub {
   font-size: 10px;
-  color: rgba(243,232,255,0.4);
+  color: rgba(253,244,255,0.4);
 }
 
 /* Ohang bar */
@@ -208,7 +208,7 @@
 .ohangTrack {
   flex: 1;
   height: 6px;
-  background: rgba(59,26,107,0.5);
+  background: rgba(90,25,140,0.5);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -221,7 +221,7 @@
 
 .ohangVal {
   font-size: 11px;
-  color: rgba(243,232,255,0.4);
+  color: rgba(253,244,255,0.4);
   width: 30px;
   text-align: right;
   flex-shrink: 0;
@@ -240,8 +240,8 @@
   align-items: center;
   gap: 14px;
   padding: 16px;
-  background: rgba(45,16,96,0.4);
-  border: 1px solid rgba(192,132,252,0.18);
+  background: rgba(55,15,100,0.4);
+  border: 1px solid rgba(236,72,153,0.18);
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -249,8 +249,8 @@
 }
 
 .menuCard:hover {
-  background: rgba(107,63,160,0.3);
-  border-color: rgba(192,132,252,0.35);
+  background: rgba(124,58,237,0.3);
+  border-color: rgba(236,72,153,0.35);
   transform: translateX(4px);
 }
 
@@ -275,12 +275,12 @@
 .menuLabel {
   font-size: 15px;
   font-weight: 600;
-  color: #F3E8FF;
+  color: var(--text-white);
 }
 
 .menuDesc {
   font-size: 12px;
-  color: rgba(243,232,255,0.5);
+  color: rgba(253,244,255,0.5);
 }
 
 .menuCost {
@@ -331,34 +331,34 @@
 
 .personChip:hover .personAvatar {
   transform: scale(1.05);
-  box-shadow: 0 4px 16px rgba(192,132,252,0.3);
+  box-shadow: 0 4px 16px rgba(236,72,153,0.3);
 }
 
 .addPersonIcon {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 1.5px dashed rgba(192,132,252,0.3);
+  border: 1.5px dashed rgba(236,72,153,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: rgba(192,132,252,0.5);
+  color: rgba(236,72,153,0.5);
   transition: all 0.3s ease;
 }
 
 .addPersonChip:hover .addPersonIcon {
-  border-color: rgba(192,132,252,0.6);
-  color: #C084FC;
+  border-color: rgba(236,72,153,0.6);
+  color: var(--pink-mid);
 }
 
 .personName {
   font-size: 12px;
-  color: rgba(243,232,255,0.7);
+  color: rgba(253,244,255,0.7);
   font-weight: 500;
 }
 
 .personRel {
   font-size: 10px;
-  color: rgba(243,232,255,0.35);
+  color: rgba(253,244,255,0.35);
 }

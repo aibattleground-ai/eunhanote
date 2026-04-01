@@ -49,7 +49,7 @@
 
 .logoStar {
   font-size: 30px;
-  background: linear-gradient(135deg, #C084FC, #F9A8D4);
+  background: linear-gradient(135deg, var(--pink-mid), #F9A8D4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -59,7 +59,7 @@
   font-family: 'Noto Serif KR', serif;
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, #C084FC 0%, #F9A8D4 60%, #F59E0B 100%);
+  background: linear-gradient(135deg, var(--pink-mid) 0%, #F9A8D4 60%, #F59E0B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -113,7 +113,7 @@
   font-family: 'Noto Serif KR', serif;
   font-size: 22px;
   font-weight: 700;
-  color: #F3E8FF;
+  color: var(--text-white);
   line-height: 1.4;
   margin-bottom: 6px;
 }
@@ -221,8 +221,8 @@
 
 .calTabActive {
   background: rgba(107, 63, 160, 0.4);
-  border-color: #C084FC;
-  color: #C084FC;
+  border-color: var(--pink-mid);
+  color: var(--pink-mid);
   font-weight: 600;
 }
 
@@ -258,7 +258,7 @@
 
 .checkLabel input:checked ~ .checkCustom {
   background: rgba(107, 63, 160, 0.6);
-  border-color: #C084FC;
+  border-color: var(--pink-mid);
 }
 
 .checkLabel input:checked ~ .checkCustom::after {
@@ -268,7 +268,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #C084FC;
+  color: var(--pink-mid);
   font-size: 12px;
 }
 
@@ -302,8 +302,8 @@
 
 .genderBtnActive {
   background: rgba(107, 63, 160, 0.4);
-  border-color: #C084FC;
-  color: #F3E8FF;
+  border-color: var(--pink-mid);
+  color: var(--text-white);
   font-weight: 600;
   box-shadow: 0 0 16px rgba(192, 132, 252, 0.25);
 }

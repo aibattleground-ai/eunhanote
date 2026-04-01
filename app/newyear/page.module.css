@@ -22,7 +22,7 @@
 .yearDesc {
   text-align: center;
   font-size: 13px;
-  color: rgba(243,232,255,0.5);
+  color: rgba(253,244,255,0.5);
   line-height: 1.7;
   margin-bottom: 24px;
 }
@@ -55,7 +55,7 @@
   align-items: center;
   gap: 14px;
   padding: 40px;
-  color: rgba(243,232,255,0.6);
+  color: rgba(253,244,255,0.6);
   font-size: 14px;
 }
 .spinner {
@@ -66,14 +66,14 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: #C084FC;
+  color: var(--pink-mid);
 }
 .spinRing {
   position: absolute;
   inset: 0;
   border-radius: 50%;
   border: 2px solid transparent;
-  border-top-color: #C084FC;
+  border-top-color: var(--pink-mid);
   border-bottom-color: #F9A8D4;
   animation: spin 1.2s linear infinite;
 }
@@ -90,11 +90,11 @@
 }
 .keywordTag {
   padding: 5px 12px;
-  background: rgba(192,132,252,0.15);
-  border: 1px solid rgba(192,132,252,0.3);
+  background: rgba(236,72,153,0.15);
+  border: 1px solid rgba(236,72,153,0.3);
   border-radius: 20px;
   font-size: 12px;
-  color: #C084FC;
+  color: var(--pink-mid);
   font-weight: 600;
   animation: pop-in 0.4s ease forwards;
 }
@@ -109,7 +109,7 @@
 }
 .summaryText {
   font-size: 13px;
-  color: rgba(243,232,255,0.75);
+  color: rgba(253,244,255,0.75);
   line-height: 1.75;
 }
 .summaryText strong {
@@ -137,21 +137,21 @@
 .seasonIcon { font-size: 24px; flex-shrink: 0; }
 .seasonInfo { flex: 1; display: flex; flex-direction: column; gap: 2px; }
 .seasonName { font-size: 12px; font-weight: 700; }
-.seasonTitle { font-size: 14px; color: rgba(243,232,255,0.8); font-weight: 500; }
-.chevron { font-size: 16px; color: rgba(243,232,255,0.4); transition: transform 0.3s ease; }
+.seasonTitle { font-size: 14px; color: rgba(253,244,255,0.8); font-weight: 500; }
+.chevron { font-size: 16px; color: rgba(253,244,255,0.4); transition: transform 0.3s ease; }
 
 .quarterText {
   font-size: 13px;
-  color: rgba(243,232,255,0.7);
+  color: rgba(253,244,255,0.7);
   line-height: 1.75;
   margin-top: 14px;
   padding-top: 14px;
-  border-top: 1px solid rgba(192,132,252,0.12);
+  border-top: 1px solid rgba(236,72,153,0.12);
 }
 
 .modalHandle {
   width: 36px; height: 4px;
-  background: rgba(192,132,252,0.3);
+  background: rgba(236,72,153,0.3);
   border-radius: 2px;
   margin: 0 auto 24px;
 }
@@ -159,25 +159,25 @@
   font-family: 'Noto Serif KR', serif;
   font-size: 20px;
   font-weight: 700;
-  color: #F3E8FF;
+  color: var(--text-white);
   text-align: center;
   margin-bottom: 10px;
 }
 .modalDesc {
   font-size: 13px;
-  color: rgba(243,232,255,0.6);
+  color: rgba(253,244,255,0.6);
   text-align: center;
   line-height: 1.7;
   margin-bottom: 14px;
 }
 .modalBalance {
-  background: rgba(107,63,160,0.3);
-  border: 1px solid rgba(192,132,252,0.25);
+  background: rgba(124,58,237,0.3);
+  border: 1px solid rgba(236,72,153,0.25);
   border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 14px;
-  color: rgba(243,232,255,0.6);
+  color: rgba(253,244,255,0.6);
   margin-bottom: 20px;
 }
 .modalBalance strong { color: #F9A8D4; font-weight: 700; }
